@@ -64,7 +64,6 @@ a {
     align-items: center;
 }
 
-/* LOGO */
 .logo-img {
     height: 100px;
     width: auto;
@@ -72,7 +71,6 @@ a {
     display: block;
 }
 
-/* Adresse */
 .address {
     font-size: 14px;
     color: var(--text-gray);
@@ -131,15 +129,23 @@ a {
     margin-top: 10px;
 }
 
-/* HERO MEDIA */
+/* =========================
+   HERO MEDIA (FIXED)
+========================= */
 .hero-image,
 .hero-video {
     width: 100%;
-    max-width: 420px;
-    margin: 32px auto;
+    max-width: 100%;
+    height: auto;
+    margin: 24px auto;
     display: block;
     border-radius: 14px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+video {
+    max-width: 100%;
+    height: auto;
 }
 
 /* =========================
@@ -199,14 +205,13 @@ section {
 }
 
 /* =========================
-   SPLIT (FIXED)
+   SPLIT
 ========================= */
 .split {
     display: flex;
-    flex-wrap: wrap;
     gap: 40px;
-    align-items: center;          /* ✅ korrekt */
-    justify-content: center;      /* ✅ horizontal zentriert */
+    align-items: center;
+    justify-content: center;
 }
 
 .split-text {
@@ -215,10 +220,11 @@ section {
 }
 
 .split-image {
-    flex: 1 1 300px;
+    width: 100%;
     max-width: 420px;
+    height: auto;
     border-radius: 14px;
-    margin: 0 auto;               /* ✅ Bild zentriert */
+    margin: 0 auto;
     display: block;
 }
 
@@ -250,8 +256,8 @@ section {
 }
 
 .benefits-images img {
-    max-width: 260px;
     width: 100%;
+    max-width: 260px;
     border-radius: 12px;
 }
 
@@ -279,19 +285,45 @@ section {
 }
 
 /* =========================
+   MINI IMPRESSUM
+========================= */
+.mini-impressum {
+    font-size: 10px;
+    color: #888888;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.2;
+    font-family: var(--font-main);
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
+
+    .hero {
+        padding: 40px 12px;
+    }
+
+    .hero-card {
+        padding: 36px 20px;
+    }
+
     .hero h1 {
         font-size: 32px;
     }
 
-    .hero-card {
-        padding: 36px 24px;
+    section {
+        padding: 40px 16px;
     }
 
     .split {
         flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 16px;
     }
 
     .logo-img {
@@ -300,15 +332,12 @@ section {
 }
 
 @media (max-width: 480px) {
+
     .hero h1 {
         font-size: 28px;
     }
-}
-.mini-impressum {
-    font-size: 10px;      /* ganz klein */
-    color: #888888;       /* hellgrau */
-    text-align: center;   /* zentriert */
-    margin: 20px 0;       /* etwas Abstand nach oben/unten */
-    line-height: 1.2;     /* kompakte Zeilenhöhe */
-    font-family: 'Inter', sans-serif;
+
+    .address {
+        font-size: 12px;
+    }
 }
