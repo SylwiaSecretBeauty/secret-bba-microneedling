@@ -338,6 +338,18 @@ section.testimonials {
         gap: 20px;
     }
 }
+/* =========================
+   MINI IMPRESSUM
+========================= */
+.mini-impressum {
+    font-size: 10px;
+    color: #888888;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.2;
+    font-family: 'Inter', sans-serif;
+}
+
 
 
 
