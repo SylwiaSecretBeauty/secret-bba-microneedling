@@ -171,6 +171,53 @@ section {
     text-align: center;
 }
 
+/* =========================
+   COLOR BANNER
+========================= */
+.color-banner {
+    background: var(--primary);
+    color: #ffffff;
+    border-radius: var(--radius);
+}
+
+.color-banner h2,
+.color-banner p {
+    color: #ffffff;
+}
+
+.color-banner .btn-primary {
+    background: #ffffff;
+    color: var(--primary);
+}
+
+.color-banner .btn-primary:hover {
+    background: #f2f2f2;
+}
+
+/* =========================
+   SPLIT
+========================= */
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-text {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.split-image {
+    flex: 1 1 300px;
+    max-width: 420px;
+    border-radius: 14px;
+    margin: 0 auto;
+    display: block;
+}
+
 * =========================
    BENEFITS
 ========================= */
@@ -291,5 +338,6 @@ section.testimonials {
         gap: 20px;
     }
 }
+
 
 
