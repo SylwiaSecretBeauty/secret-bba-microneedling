@@ -123,31 +123,19 @@ a {
 
 .hero h1 {
     font-size: 40px;
-    font-weight: 800;
     line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
 .hero-highlight {
     color: var(--primary);
 }
 
-.old-price {
-    text-decoration: line-through;
-    color: #999;
-}
-
 .hero-sub {
     font-size: 16px;
     color: var(--text-gray);
     margin-top: 10px;
-}
-
-.hero-video,
-.hero-image {
-    max-width: 420px;
-    margin: 32px auto;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* =========================
@@ -167,7 +155,7 @@ a {
 }
 
 /* =========================
-   SECTIONS
+   SECTIONS (GLOBAL)
 ========================= */
 section {
     max-width: 720px;
@@ -177,25 +165,11 @@ section {
 }
 
 /* =========================
-   SPLIT
-========================= */
-.split {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-}
-
-.split-image {
-    max-width: 420px;
-    border-radius: 14px;
-}
-
-/* =========================
    BENEFITS
 ========================= */
 .benefit-grid {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
 }
@@ -205,58 +179,56 @@ section {
     padding: 24px;
     border-radius: var(--radius);
     box-shadow: var(--shadow-soft);
+    flex: 1 1 200px;
 }
 
-* =========================
-   TESTIMONIALS
+/* =========================
+   ⭐ TESTIMONIALS – FIXED
 ========================= */
-.testimonials {
-    background: var(--bg-light);
-    border-radius: var(--radius);
-    padding: 70px 20px;
+section.testimonials {
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background: #fbf7f5;
+    padding: 90px 20px;
 }
 
 .testimonials h2 {
     font-size: 28px;
-    font-weight: 700;
     margin-bottom: 10px;
 }
 
-.testimonials-sub {
-    font-size: 15px;
+.testimonials p {
     color: var(--text-gray);
-    margin-bottom: 40px;
 }
 
 .testimonial-grid {
+    max-width: 720px;
+    margin: 60px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
 }
 
 .testimonial-card {
-    background: var(--white);
-    padding: 26px 22px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
-    text-align: center;
+    background: #ffffff;
+    padding: 36px 28px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
 }
 
 .testimonial-text {
-    font-size: 15px;
-    color: var(--text-dark);
     font-style: italic;
-    margin-bottom: 18px;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
 }
 
 .testimonial-author {
-    font-size: 14px;
+    font-weight: 600;
     color: var(--primary-dark);
-    line-height: 1.4;
-}
-
-.testimonials-btn {
-    margin-top: 36px;
+    font-size: 14px;
 }
 
 /* =========================
@@ -269,54 +241,19 @@ section {
 }
 
 /* =========================
-   FINAL CTA
-========================= */
-.final-cta {
-    text-align: center;
-}
-
-.final-cta p {
-    margin-top: 14px;
-    font-size: 14px;
-    color: var(--text-gray);
-    pointer-events: none;
-}
-
-/* =========================
-   RESPONSIVE
+   MOBILE
 ========================= */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 32px;
-    }
 
-    .hero-card {
-        padding: 36px 24px;
-    }
-
-    .split {
-        flex-direction: column;
-    }
-
-    .logo-img {
-        height: 36px;
-    }
-}
-
-@media (max-width: 480px) {
     .hero h1 {
         font-size: 28px;
     }
-}
 
-/* =========================
-   MINI IMPRESSUM
-========================= */
-.mini-impressum {
-    font-size: 10px;
-    color: #888888;
-    text-align: center;
-    margin: 20px 0;
-    line-height: 1.2;
-    font-family: 'Inter', sans-serif;
+    .btn {
+        width: 100%;
+    }
+
+    section.testimonials {
+        padding: 70px 16px;
+    }
 }
