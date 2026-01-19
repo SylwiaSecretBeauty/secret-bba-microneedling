@@ -49,9 +49,8 @@ iframe {
     display: block;
 }
 
-/* Video NICHT pauschal height:auto setzen (wichtig für Mobile!) */
 video {
-    max-width: 100%;
+    width: 100%;
     display: block;
 }
 
@@ -144,16 +143,17 @@ a {
 }
 
 /* =========================
-   HERO VIDEO (DESKTOP)
+   HERO VIDEO
 ========================= */
+/* Desktop: komplette Ansicht ohne Beschnitt */
 .hero-video {
     width: 100%;
     max-width: 520px;
     aspect-ratio: 16 / 9;
-    object-fit: cover;
+    object-fit: contain;
+    background: #000; /* verhindert weiße Blitzer */
     border-radius: 14px;
     margin: 40px auto 52px;
-    background: #000; /* verhindert weiße Blitzer auf iOS */
 }
 
 /* =========================
@@ -335,10 +335,10 @@ section.testimonials {
         width: 100%;
     }
 
-    /* 🔥 WICHTIG: Mobile Video Fix */
+    /* Mobile: Hochformat & emotionaler Look */
     .hero-video {
-        max-width: 100%;
-        aspect-ratio: 4 / 5;   /* Hochformat wirkt auf Mobile deutlich besser */
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
         margin: 28px auto 36px;
         border-radius: 12px;
     }
